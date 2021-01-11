@@ -232,14 +232,93 @@ Navbar
     align-items: center;
   }
 }
+/* fixed navbar */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
 
+}
+.scrolling {
+  background: coral;
+  min-height: 200vh;
+}
 
 /*
 =============== 
 Sidebar
 ===============
 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: var(--clr-grey-10);
 
+  display: grid;
+  /* these 2 values can be replace by one: place-items: center;*/
+  /* align-items: center;
+  justify-content: center; */
+  place-items: center;
+  transition: var(--transition);
+  transform: translateX(-100%);
+}
+.show-sidebar {
+  transform: translateX(0);
+}
+.sidebar-links {
+  text-align: center;
+}
+.sidebar-links a {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+  color: var(--clr-grey-5);
+  letter-spacing: var(--spacing);
+}
+.sidebar-links a:hover {
+  color: var(--clr-primary-5);
+}
+.social-icons {
+  margin-top: 2rem;
+  width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  
+}
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: var(--clr-primary-5);
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: transparent;
+  outline: none;
+  color: #bb2525;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #e66b6b;
+}
 /*
 =============== 
 Hero
