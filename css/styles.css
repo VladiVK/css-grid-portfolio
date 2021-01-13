@@ -715,6 +715,11 @@ Timeline
 ===============
 */
 
+.timeline-center {
+  width: 80vw;
+  max-width: width 40rem;
+}
+
 /*
 =============== 
 Blog
