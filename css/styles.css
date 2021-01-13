@@ -766,8 +766,6 @@ Timeline
   align-items: center;
   /* display: grid; */
   /* place-items: center; */
-  
-  
 }
 .timeline-item:nth-child(even) .number {
   left: 0;
@@ -782,7 +780,77 @@ Timeline
 Blog
 ===============
 */
+.blog {
+  background: var(--clr-grey-10);
+}
+.card-info {
+  padding: 1rem 1.5rem;
+}
+.card {
+  /* important for positioning!!! */
+  height: 27rem;
+  position: relative;
+  perspective: 2000px;
+}
+.card-side {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*
+   we did for .card-back: transform: rotateY(180deg);
+   so rotated it and put back before eyes!!!
+   now we hide that back
+  */
+  backface-visibility: hidden;
+  transition: all 2s linear;
+  border-radius: var(--radius);
+}
+.card-front {
+  background: var(--clr-white);
+}
+.card-back {
+  background: var(--clr-primary-10);
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+}
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0);
+}
 
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card-footer  {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.card-footer p {
+  /* we default global mb 1.25rem for all p */
+  margin-bottom: 0;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 3rem 1rem;
+}
 /*
 =============== 
 Footer
