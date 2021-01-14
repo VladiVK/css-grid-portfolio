@@ -815,8 +815,8 @@ Blog
   transition: all 2s linear;
   border-radius: var(--radius);
   /* for iPhones */
-  -webkit-transform: rotate3d(0,0,0);
-  visibility: visible;
+  /* -webkit-transform: rotate3d(0,0,0); */
+  /* visibility: visible; */
 }
 .card-front {
   background: var(--clr-white);
